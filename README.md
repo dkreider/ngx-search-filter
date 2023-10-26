@@ -1,27 +1,30 @@
-# Angular 2 / Angular 4 / Angular 5 Search Filter Pipe
+<p align="center">
+ <img width="15%" height="15%" src="logo.png">
+</p>
 
-[![npm version](https://img.shields.io/badge/version-0.4.0-blue.svg)](https://www.npmjs.com/package/ng2-search-filter) [![](https://david-dm.org/solodynamo/ng2-search-filter.svg)](https://www.npmjs.com/package/ng2-search-filter)
-[![](https://img.shields.io/badge/downloads-24K%2B-red.svg)](https://www.npmjs.com/package/ng2-search-filter)
+<br />
 
-> Filter search items
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-search-filter)](https://bundlephobia.com/result?p=ngx-loading-button)
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![npm](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](https://github.com/dkreider/ngx-search-filter/blob/main/LICENSE)
 
-Angular 2 filter to make custom search. Works with Angular 4 and Angular 5 too.
 
-![demo-image](http://i.imgur.com/dI5Mzvq.gif)
+## [ngx-search-filter](https://www.npmjs.com/package/ngx-search-filter)
+A lightweight Angular search filter pipe. You can use it with [ngFor](https://angular.io/api/common/NgFor) to filter arrays of strings of objects.
 
+![demo-image](https://i.imgur.com/dI5Mzvq.gif)
 
 
 ## Install
 
+```bash
+npm i ngx-search-filter --save
 ```
-npm i ng2-search-filter --save
-```
-```
-yarn add ng2-search-filter 
+```bash
+yarn add ngx-search-filter 
 ```
 ## Usage
-
-In case you're using `systemjs` - see configuration [here](https://github.com/solodynamo/ng2-search-filter/blob/master/SYSTEMJS.md).
 
 Import `Ng2SearchPipeModule` to your module
 
@@ -30,10 +33,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule  } from '@angular/platform-browser';
 import { AppComponent } from './app';
 
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2SearchPipeModule } from 'ngx-search-filter';
 
 @NgModule({
-  imports: [BrowserModule, Ng2SearchPipeModule],
+  imports: [
+    BrowserModule, 
+    Ng2SearchPipeModule
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
@@ -50,7 +56,7 @@ import { Component } from '@angular/core';
   template: `
     <div>
         <input type="text" [(ngModel)]="term">
-        <div *ngFor = "let item of items |filter:term" >
+        <div *ngFor = "let item of items | filter:term" >
           <p>
             {{item.name}}
           </p>
@@ -66,9 +72,9 @@ export class AppComponent {
 }
 ```
 
-## Support ng2-search-filter
+## Support ngx-search-filter
 
-ng2-search-filter is completely free and open-source. If you find it useful, you can show your support by 🌟 it or sharing it in your social network.
+ngx-search-filter is completely free and open-source. If you find it useful, you can show your support by 🌟 it or sharing it in your social network.
 
 ## Contribute
 
@@ -77,3 +83,7 @@ Please do 🙂
 ## License
 
 [MIT](https://tldrlegal.com/license/mit-license) © [Solodynamo](https://github.com/solodynamo/ng2-search-filter)
+
+## Credits
+
+<a href="https://www.flaticon.com/free-icons/magnifying-glass" title="magnifying glass icons">Magnifying glass icons created by Freepik - Flaticon</a>
