@@ -1,27 +1,79 @@
-# NgxSearchFilter
+# Angular 2 / Angular 4 / Angular 5 Search Filter Pipe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+[![npm version](https://img.shields.io/badge/version-0.4.0-blue.svg)](https://www.npmjs.com/package/ng2-search-filter) [![](https://david-dm.org/solodynamo/ng2-search-filter.svg)](https://www.npmjs.com/package/ng2-search-filter)
+[![](https://img.shields.io/badge/downloads-24K%2B-red.svg)](https://www.npmjs.com/package/ng2-search-filter)
 
-## Development server
+> Filter search items
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular 2 filter to make custom search. Works with Angular 4 and Angular 5 too.
 
-## Code scaffolding
+![demo-image](http://i.imgur.com/dI5Mzvq.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Install
 
-## Running unit tests
+```
+npm i ng2-search-filter --save
+```
+```
+yarn add ng2-search-filter 
+```
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In case you're using `systemjs` - see configuration [here](https://github.com/solodynamo/ng2-search-filter/blob/master/SYSTEMJS.md).
 
-## Running end-to-end tests
+Import `Ng2SearchPipeModule` to your module
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule  } from '@angular/platform-browser';
+import { AppComponent } from './app';
 
-## Further help
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@NgModule({
+  imports: [BrowserModule, Ng2SearchPipeModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+And use pipe in your component after declaring and initializing it in your component:
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'example-app',
+  template: `
+    <div>
+        <input type="text" [(ngModel)]="term">
+        <div *ngFor = "let item of items |filter:term" >
+          <p>
+            {{item.name}}
+          </p>
+        </div>
+
+    </div>  
+  `
+})
+
+export class AppComponent {
+  items: string[] = [{ name: "archie" }, { name: "jake" }, { name: "richard" }];
+  term = '';
+}
+```
+
+## Support ng2-search-filter
+
+ng2-search-filter is completely free and open-source. If you find it useful, you can show your support by 🌟 it or sharing it in your social network.
+
+## Contribute
+
+Please do 🙂
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license) © [Solodynamo](https://github.com/solodynamo/ng2-search-filter)
