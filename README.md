@@ -1,6 +1,6 @@
-> Important Note: This is a fork of [ng2-search-filter](https://github.com/solodynamo/ng2-search-filter) that has now been archived. Many thanks to [Ankit](https://github.com/solodynamo) and all the other contributors.
-
-<img width="15%" height="15%" src="https://raw.githubusercontent.com/dkreider/ngx-search-filter/main/logo.png">
+<p align="center">
+  <img width="15%" height="15%" src="https://raw.githubusercontent.com/dkreider/ngx-search-filter/main/logo.png">
+</p>
 <br />
 
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-search-filter)](https://bundlephobia.com/result?p=ngx-search-filter``)
@@ -11,6 +11,8 @@
 
 
 ## [ngx-search-filter](https://www.npmjs.com/package/ngx-search-filter)
+
+> Important Note: This is a fork of [ng2-search-filter](https://github.com/solodynamo/ng2-search-filter) that has now been archived. Many thanks to [Ankit](https://github.com/solodynamo) and all the other contributors.
 
 A lightweight Angular search filter pipe. You can use it with [ngFor](https://angular.io/api/common/NgFor) to filter arrays of strings of objects.
 
@@ -107,7 +109,7 @@ Contributions of any kind welcome!
 
 ## License 📜
 
-[MIT](https://tldrlegal.com/license/mit-license) © [Solodynamo](https://github.com/solodynamo/ng2-search-filter)
+[MIT](https://tldrlegal.com/license/mit-license) © [dkreider](https://github.com/dkreider/ngx-search-filter/blob/main/LICENSE)
 
 ## Credits 🧸
 
