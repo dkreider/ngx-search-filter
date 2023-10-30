@@ -3,6 +3,8 @@
 </p>
 <br />
 
+![npm](https://img.shields.io/npm/dt/ngx-search-filter)
+![npm](https://img.shields.io/npm/dm/ngx-search-filter)
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/ngx-search-filter)](https://bundlephobia.com/result?p=ngx-search-filter``)
 [![ngx-search-filter](https://github.com/dkreider/ngx-search-filter/workflows/ngx-search-filter/badge.svg)](https://github.com/dkreider/ngx-search-filter/actions/workflows/main.yml)
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
